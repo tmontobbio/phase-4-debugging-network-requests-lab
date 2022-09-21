@@ -64,10 +64,21 @@ developing your own process.
 
   - How I debugged:
 
+  -open chrome console
+  -"submitted a new toy" to find the error in network tab
+  -uninitialized constant in toy controller - found the create method called on Toys and not Toy
+
 - Update the number of likes for a toy
 
   - How I debugged:
 
+  -open chrome console
+  -input likes, recieved unexpected end of JSON input - server not replying with any data
+  -looked in controller and found no render json: response
+
 - Donate a toy to Goodwill (and delete it from our database)
 
   - How I debugged:
+
+  -opened console, found that delete caused a "no route matches delete error"
+  -checked routes file and found destroy was not added to resources list
